@@ -7,11 +7,11 @@
     "donateaddress": "",
 
     "rewardRecipients": {
-        "": 0.0
+        "": 0.5
     },
 
     "paymentProcessing": {
-        "enabled": false,
+        "enabled": true,
         "schema": "PROP",
         "paymentInterval": 300,
         "minimumPayment": 0.25,
@@ -21,8 +21,8 @@
         "daemon": {
             "host": "127.0.0.1",
             "port": 6005,
-            "user": "MY_RPC_USER",
-            "password": "MY_RPC_PASS"
+            "user": "user1",
+            "password": "pass1"
         }
     },
 
@@ -63,8 +63,8 @@
         {
             "host": "127.0.0.1",
             "port": 9053,
-            "user": "MY_RPC_USER",
-            "password": "MY_RPC_PASS"
+            "user": "user1",
+            "password": "pass1"
         }
     ],
 
