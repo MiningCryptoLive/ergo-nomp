@@ -8,13 +8,24 @@ echo "Installing... Please wait!"
 
 sleep 3
 
-sudo add-apt-repository -y ppa:bitcoin/bitcoin
 
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 
 sudo apt-get install -y sudo git nano wget curl ntp build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev git npm nodejs nodejs-legacy libminiupnpc-dev redis-server software-properties-common fail2ban 
+sudo apt-get install libboost-all-dev libzmq3-dev libminiupnpc-dev
+sudo apt-get install curl git build-essential libtool autotools-dev
+sudo apt-get install automake pkg-config bsdmainutils python3
+sudo apt-get install software-properties-common libssl-dev libevent-dev
+
+git clone https://github.com/bitcoin/bitcoin.git
+cd bitcoin
+./autogen.sh
+./configure
+make
+cd src
+sudo install -sv bitcoind bitcoin-cli /usr/local/bin
 
 wget http://download.oracle.com/berkeley-db/db-4.8.30.zip
 unzip db-4.8.30.zip
