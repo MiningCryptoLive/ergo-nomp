@@ -49,7 +49,10 @@ sudo systemctl start redis-server
 sudo systemctl enable ntp
 sudo systemctl start ntp
 
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+sleep 2
+
 source ~/.bashrc
 
 nvm install v8.1.4
