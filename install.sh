@@ -49,11 +49,15 @@ sudo systemctl start redis-server
 sudo systemctl enable ntp
 sudo systemctl start ntp
 
+sleep 4
+
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 sleep 2
 
 source ~/.bashrc
+
+sleep 5
 
 nvm install v8.1.4
 nvm use v8.1.4
@@ -62,7 +66,7 @@ npm update -g
 npm install -g pm2@latest
 npm install -g npm@latest
 
-cd ergonomp
+cd ~/ergonomp
 
 npm install
 
