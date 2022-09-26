@@ -52,23 +52,19 @@ sudo systemctl start ntp
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 source ~/.bashrc
 
-nvm install v8.1.4
-nvm use v8.1.4
+nvm install v12.13.0
+nvm use v12.13.0
 npm update -g
 
 npm install -g pm2@latest
 npm install -g npm@latest
 
-git clone https://github.com/EasyX-Community/EasyNOMP.git $(pwd)/EasyNOMP
-
-cd EasyNOMP
+cd ergonomp
 
 npm install
 
 npm update
 npm audit fix
-
-./start-pool.sh
 
 
 echo "Installation completed!"
