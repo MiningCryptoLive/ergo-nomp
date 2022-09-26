@@ -33,7 +33,7 @@ cd db-4.8.30
 
 sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' dbinc/atomic.h
 
-cd bitcoin
+cd ~/ergonomp/bitcoin
 ./autogen.sh
 ./configure
 make
@@ -54,6 +54,8 @@ sleep 4
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 sleep 2
+
+cd ~
 
 source ~/.bashrc
 
